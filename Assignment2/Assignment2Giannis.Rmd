@@ -1,0 +1,41 @@
+---
+title: "ExampleRMarkdownDoc"
+author: "Giannis Alexandrou"
+date: "10/6/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Wave plot
+```{r}
+  x <- seq(0,20,by=0.01)
+  
+  y <- seq(length=length(x))
+  i <- 1
+  for (val in x)
+  {
+    y[i] <- sin(x[i])
+    i <- i+1
+  }
+  
+  sin_df <- data.frame(x=x,y=y)
+  head(sin_df)
+```
+
+```{r, echo=FALSE}
+  plot(x,y)
+```
+
+# Replicability and reproducibility
+
+### Replicability
+Replicability is the concept where different experiments will yield the same result from different data under similar conditions.
+
+### Reproducibility
+Reproducibility is the concept where different scientist will yield the same results on the same data (original data) and same condition of analysis and processing.
+
+
+The most challenging concept is the Reproducibility. In order to reproduce a research, scientist might need extra information and training which are lack of. The researcher needs to know information related to source code, computational analysis and models that the other scientist produce and did not convey to the paper.
