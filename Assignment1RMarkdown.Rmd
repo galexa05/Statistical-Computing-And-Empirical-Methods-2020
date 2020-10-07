@@ -1,0 +1,51 @@
+---
+title: "Assignment1"
+author: "Giannis Alexandrou"
+date: "10/7/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Create your first data frame
+```{r}
+  animals <- c("Snake","Ostrich","Cat","Spider")
+  print(animals)
+  num_legs <- c(0,2,4,8)
+  print(num_legs)
+  
+  animals_df <- data.frame(animals,num_legs)
+  print(animals_df)
+```
+
+## Matrix Operations
+```{r}
+  x <- seq(12,2,by=-2)
+  x <- matrix(x,2,3)
+  
+  y <- c(1,2,3,4)
+  y <- matrix(y,2,2)
+  
+  inverse_y <- solve(y)
+  result <- inverse_y %*% x
+  print(result)
+```
+
+## Writing a simple function within R
+```{r}
+  myFirstRFunc <- function(num){
+      stopifnot(is.numeric(num),num%%1==0,num>=0) # Stop if the input is not a non-negative integer
+      sum <- 0
+      for (i in 1:num-1){
+        if (i%%2==0 | i%%7==0){
+          sum <- sum + i
+        }
+      }
+      print(sum)
+  }
+  
+  myFirstRFunc(14)
+  myFirstRFunc(1000)
+```
