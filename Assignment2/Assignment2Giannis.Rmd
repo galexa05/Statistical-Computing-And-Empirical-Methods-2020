@@ -39,3 +39,5 @@ Reproducibility is the concept where different scientist will yield the same res
 
 
 The most challenging concept is the Reproducibility. In order to reproduce a research, scientist might need extra information and training which are lack of. The researcher needs to know information related to source code, computational analysis and models that the other scientist produce and did not convey to the paper.
+
+Replicability is the stronger!!
